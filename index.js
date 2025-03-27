@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 
+
 const sessions = new Map();
 
 io.on("connection", (socket) => {
@@ -55,7 +56,6 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000; // Use env port on Railway
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server listening on port ${PORT}`);
 });
-
